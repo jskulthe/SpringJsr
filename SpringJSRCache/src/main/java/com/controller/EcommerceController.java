@@ -21,9 +21,6 @@ public class EcommerceController {
     @Autowired
     private CustomerDetailService customerDetailBO;
 
-    @Autowired
-    private OrderDetailService orderDetailBO;
-
     @GetMapping(value = "/getCustomer/{customerid}")
     public Customer getCustomer(@PathVariable Integer customerid) {
         return customerDetailBO.getCustomerDetail(customerid);
